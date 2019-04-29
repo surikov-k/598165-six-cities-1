@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
-* Студент: [Константин Суриков](https://up.htmlacademy.ru/react/1/user/598165).
-* Наставник: `Неизвестно`.
+- Студент: [Константин Суриков](https://up.htmlacademy.ru/react/1/user/598165).
+- Наставник: [Евгений Штурман](https://htmlacademy.ru/profile/id73551).
 
 ---
 
