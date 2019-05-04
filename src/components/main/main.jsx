@@ -1,6 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export const Main = () => {
+export const Main = (props) => {
+  Main.propTypes = {
+    offerTitles: PropTypes.arrayOf(PropTypes.string).isRequired
+  };
+  const {offerTitles} = props;
+  const randomOfferTitle = () => {
+    return offerTitles[Math.round(Math.random() * (offerTitles.length - 1))];
+  };
+
   return (
     <div>
       <div style={{display: `none`}}>
@@ -172,9 +181,7 @@ export const Main = () => {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#">
-                        Beautiful &amp; luxurious apartment at great location
-                      </a>
+                      <a href="#">{randomOfferTitle()}</a>
                     </h2>
                     <p className="place-card__type">Apartment</p>
                   </div>
@@ -221,7 +228,7 @@ export const Main = () => {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#">Wood and stone place</a>
+                      <a href="#">{randomOfferTitle()}</a>
                     </h2>
                     <p className="place-card__type">Private room</p>
                   </div>
@@ -268,7 +275,7 @@ export const Main = () => {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#">Canal View Prinsengracht</a>
+                      <a href="#">{randomOfferTitle()}</a>
                     </h2>
                     <p className="place-card__type">Apartment</p>
                   </div>
@@ -318,7 +325,7 @@ export const Main = () => {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#">Nice, cozy, warm big bed apartment</a>
+                      <a href="#">{randomOfferTitle()}</a>
                     </h2>
                     <p className="place-card__type">Apartment</p>
                   </div>
@@ -365,7 +372,7 @@ export const Main = () => {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#">Wood and stone place</a>
+                      <a href="#">{randomOfferTitle()}</a>
                     </h2>
                     <p className="place-card__type">Private room</p>
                   </div>
