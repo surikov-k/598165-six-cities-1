@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 
 export const Main = (props) => {
   Main.propTypes = {
-    offerTitles: PropTypes.arrayOf(PropTypes.string).isRequired
+    offerTitles: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onCardHeaderClick: PropTypes.func
   };
-  const {offerTitles} = props;
+  const {offerTitles, onCardHeaderClick} = props;
   const randomOfferTitle = () => {
     return offerTitles[Math.round(Math.random() * (offerTitles.length - 1))];
   };
@@ -181,7 +182,7 @@ export const Main = (props) => {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#">{randomOfferTitle()}</a>
+                      <a href="#" onClick={onCardHeaderClick}>{randomOfferTitle()}</a>
                     </h2>
                     <p className="place-card__type">Apartment</p>
                   </div>
@@ -228,7 +229,7 @@ export const Main = (props) => {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#">{randomOfferTitle()}</a>
+                      <a href="#" onClick={onCardHeaderClick}>{randomOfferTitle()}</a>
                     </h2>
                     <p className="place-card__type">Private room</p>
                   </div>
@@ -275,7 +276,7 @@ export const Main = (props) => {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#">{randomOfferTitle()}</a>
+                      <a href="#" onClick={onCardHeaderClick}>{randomOfferTitle()}</a>
                     </h2>
                     <p className="place-card__type">Apartment</p>
                   </div>
@@ -325,7 +326,7 @@ export const Main = (props) => {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#">{randomOfferTitle()}</a>
+                      <a href="#" onClick={onCardHeaderClick}>{randomOfferTitle()}</a>
                     </h2>
                     <p className="place-card__type">Apartment</p>
                   </div>
@@ -372,7 +373,7 @@ export const Main = (props) => {
                       </div>
                     </div>
                     <h2 className="place-card__name">
-                      <a href="#">{randomOfferTitle()}</a>
+                      <a href="#" onClick={onCardHeaderClick}>{randomOfferTitle()}</a>
                     </h2>
                     <p className="place-card__type">Private room</p>
                   </div>
