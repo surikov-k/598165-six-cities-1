@@ -15,8 +15,6 @@ it(`Click on card header calls callback`, () => {
 
   const cardHeaderLinks = screen.find(`.place-card__name > a`);
 
-  cardHeaderLinks.forEach((link) => {
-    link.simulate(`click`, {preventDefault() {}});
-  });
-  expect(clickHandler).toHaveBeenCalledTimes(cardHeaderLinks.length);
+  cardHeaderLinks.at(0).simulate(`click`, {preventDefault() {}});
+  expect(clickHandler).toHaveBeenCalledTimes(1);
 });
