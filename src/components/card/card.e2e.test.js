@@ -23,8 +23,8 @@ it(`passes to onImageClick callback correct card id`, () => {
   const card = mount(<Card
     card={mock}
     handlerImgClick={onImageClick}
-    handlerMouseEnter={() => {}}
-    handlerMouseLeave={() => {}}
+    handlerMouseEnter={jest.fn()}
+    handlerMouseLeave={jest.fn()}
   />);
 
   const img = card.find(`.place-card__image`);

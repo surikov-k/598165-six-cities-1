@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import Card from '../card/card.jsx';
 
 class OffersList extends React.PureComponent {
+  setActiveCard(id) {
+    this.setState({
+      activeCard: id
+    });
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -22,20 +28,25 @@ class OffersList extends React.PureComponent {
           key={it.id}
           card={it}
           handlerMouseEnter={() => {
-            this.setState({
-              activeCard: it.id
-            });
+            this.setActiveCard(it.id);
+            // this.setState({
+            //   activeCard: it.id
+            // });
           }
           }
           handlerMouseLeave={() => {
-            this.setState({
-              activeCard: null
-            });
+            this.setActiveCard(null);
+
+            // this.setState({
+            //   activeCard: null
+            // });
           }}
           handlerImgClick={() => {
-            this.setState({
-              activeCard: it.id
-            });
+            this.setActiveCard(it.id);
+
+            // this.setState({
+            //   activeCard: it.id
+            // });
           }}
           handlerCardTitleClick={handlerCardTitleClick}
         />
