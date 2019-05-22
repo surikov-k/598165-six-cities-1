@@ -7,6 +7,7 @@ export default [
     name: `Canal View Prinsengracht`,
     type: `apartment`,
     premium: true,
+    origin: [52.3909553943508, 4.85309666406198],
   },
   {
     id: 1,
@@ -16,6 +17,7 @@ export default [
     name: `Nice, cozy, warm big bed apartment`,
     type: `room`,
     premium: false,
+    origin: [52.369553943508, 4.85309666406198],
   },
   {
     id: 2,
@@ -25,6 +27,7 @@ export default [
     name: `Beautiful & luxurious apartment at great location`,
     type: `apartment`,
     premium: false,
+    origin: [52.3909553943508, 4.929309666406198],
   },
   {
     id: 3,
@@ -34,5 +37,6 @@ export default [
     name: `Wood and stone place`,
     type: `apartment`,
     premium: true,
+    origin: [52.3809553943508, 4.939309666406198],
   },
 ];

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Main component renders correctly 1`] = `
 <div>
   <div
     style={
@@ -375,7 +375,16 @@ exports[`renders correctly 1`] = `
         >
           <section
             className="cities__map map"
-          />
+          >
+            <div
+              id="map"
+              style={
+                Object {
+                  "height": "823px",
+                }
+              }
+            />
+          </section>
         </div>
       </div>
     </div>
