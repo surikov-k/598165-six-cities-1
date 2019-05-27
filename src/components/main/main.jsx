@@ -2,12 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import OffersList from "../offers-list/offers-list.jsx";
+import Map from '../map/map.jsx';
 
 const Main = (props) => {
 
   const {
     offers,
     handlerCardTitleClick,
+    leaflet,
   } = props;
 
   return (
@@ -142,7 +144,12 @@ const Main = (props) => {
               />
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map" />
+              <section className="cities__map map">
+                <Map
+                  offers={offers}
+                  leaflet={leaflet}
+                />
+              </section>
             </div>
           </div>
         </div>
@@ -159,8 +166,11 @@ Main.propTypes = {
     name: PropTypes.string.isRequired,
     type: PropTypes.oneOf([`apartment`, `room`, `house`, `hotel`]).isRequired,
     premium: PropTypes.bool,
+    origin: PropTypes.arrayOf(PropTypes.number).isRequired,
   })),
   handlerCardTitleClick: PropTypes.func,
+  leaflet: PropTypes.object.isRequired,
+
 };
 
 export default Main;

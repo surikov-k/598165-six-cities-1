@@ -2,11 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import Main from "../main/main.jsx";
 
+import leaflet from 'leaflet';
+
 const App = (props) => {
   const {offers} = props;
   return <Main
     offers={offers}
     handlerCardTitleClick={() => {}}
+    leaflet={leaflet}
   />;
 };
 
